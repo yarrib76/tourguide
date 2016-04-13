@@ -17,6 +17,7 @@ import java.util.ArrayList;
 
 public class BluetoothActivity extends AppCompatActivity {
     private Button btn_scan;
+    private Button btn_btn_agrega_confirmados;
     private BluetoothAdapter mBluetoothAdapter;
     private ListView listaBlueTooth;
     private ArrayList<ListBlueTooth> datos;
@@ -26,6 +27,7 @@ public class BluetoothActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bluetooth);
         btn_scan = (Button) findViewById(R.id.btn_scan);
+        btn_btn_agrega_confirmados = (Button) findViewById(R.id.btn_agrega_confirmados);
         listaBlueTooth = (ListView) findViewById(R.id.lista_blueTooth);
         mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
         btn_scan.setOnClickListener(new View.OnClickListener() {
@@ -44,7 +46,7 @@ public class BluetoothActivity extends AppCompatActivity {
         listaBlueTooth.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                if (datos.get(position).getActivo()){
+                if (datos.get(position).getActivo()) {
                     datos.get(position).setEstado("Inactivo");
                     datos.get(position).setActivo(false);
                 } else {
@@ -52,6 +54,12 @@ public class BluetoothActivity extends AppCompatActivity {
                     datos.get(position).setActivo(true);
                 }
                 adapterBlueTooth.notifyDataSetChanged();
+            }
+        });
+        btn_btn_agrega_confirmados.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                
             }
         });
     }
