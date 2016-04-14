@@ -9,7 +9,7 @@ import android.database.sqlite.SQLiteOpenHelper;
  */
 public class DbHelper extends SQLiteOpenHelper {
     private static final String DATABASE_NAME = "tourguide.sqlite";
-    public static final int DATABASE_VERSION = 1;
+    public static final int DATABASE_VERSION = 6;
 
     private static final String CREATE_TABLE_BLUETOOTH = "CREATE TABLE IF NOT EXISTS " + Contract.BluetoothActivos.TABLA_BLUETOOTHACTIVOS +
             "(" + Contract.BluetoothActivos.COL_ID + " INTEGER PRIMARY KEY AUTOINCREMENT  NOT NULL , "
@@ -38,5 +38,6 @@ public class DbHelper extends SQLiteOpenHelper {
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL("DROP TABLE IF EXISTS " + Contract.BluetoothActivos.TABLA_BLUETOOTHACTIVOS);
+        onCreate(db);
     }
 }

@@ -7,26 +7,18 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.yamil.tourguide.MainActivity">
+    tools:context="com.yamil.tourguide.RegresoExcurActivity">
 
     <Button
-        android:id="@+id/btn_bluetooth"
+        android:id="@+id/btn_scan_regreso"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="BlueTooth"/>
+        android:text="Scan" />
 
-    <Button
-    android:id="@+id/btn_mapa"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="Mapa"
-    android:layout_below="@id/btn_bluetooth"/>
-
-    <Button
-        android:id="@+id/btn_regreso"
+    <ListView
+        android:id="@+id/lista_regreso_bluetooth"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Regreso"
-        android:layout_below="@id/btn_mapa"/>
-
+        android:layout_below="@+id/btn_scan_regreso">
+    </ListView>
 </RelativeLayout>

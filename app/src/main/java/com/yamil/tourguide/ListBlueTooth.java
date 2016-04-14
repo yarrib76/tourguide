@@ -15,6 +15,12 @@ public class ListBlueTooth {
         this.activo = activo;
     }
 
+    public ListBlueTooth(String nombre, String macAddress, Boolean activo, String estado) {
+        this.nombre = nombre;
+        this.macAddress = macAddress;
+        this.activo = activo;
+        this.estado = estado;
+    }
 
     public String getNombre() {
         return nombre;

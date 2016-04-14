@@ -10,9 +10,9 @@ import android.util.Log;
 /**
  * Created by yamil on 4/12/16.
  */
-public class Provider extends DbHelper{
+public class DbProvider extends DbHelper{
     Cursor c;
-    public Provider(Context context) {
+    public DbProvider(Context context) {
         super(context);
     }
     public long insert (String tabla, ContentValues contentValues){
