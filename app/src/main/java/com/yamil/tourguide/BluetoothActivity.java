@@ -39,7 +39,10 @@ public class BluetoothActivity extends AppCompatActivity {
         mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
         provider = new DbProvider(this);
         contentValues = new ContentValues();
+<<<<<<< HEAD
         datos = new ArrayList<ListBlueTooth>();
+=======
+>>>>>>> ad44a799fcfeaecd9ad3fc226807a369cac51080
         btn_scan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
